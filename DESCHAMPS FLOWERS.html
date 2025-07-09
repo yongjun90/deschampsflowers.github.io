@@ -1,0 +1,526 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="deschampsflowers" />
+<title>Deschamps Flowers - Más Productos</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fff8f5;
+  }
+  header {
+    background-color: #e91e63;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  header img {
+    height: 60px;
+  }
+  nav {
+    background-color: #f8bbd0;
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+    padding: 0.5rem;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    position: relative;
+  }
+  nav > div.dropdown {
+    position: relative;
+  }
+  nav a, nav button {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  nav a:hover, nav button:hover {
+    background-color: #e91e63;
+    color: white;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 2.2rem;
+    left: 0;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 1;
+    flex-direction: column;
+  }
+  .dropdown-content a {
+    color: #333;
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 0;
+  }
+  .dropdown-content a:hover {
+    background-color: #e91e63;
+    color: #fff;
+  }
+  .dropdown:hover .dropdown-content {
+    display: flex;
+  }
+  section {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  /* Galería en cuadrícula con imágenes cuadradas */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+    margin-top: 1.5rem;
+  }
+  .gallery img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    background-color: #f8f4f1;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: block;
+  }
+
+  .contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0 2rem 0;
+  }
+  .btn-contact {
+    background-color: #e91e63;
+    color: white;
+    padding: 0.8rem 1.4rem;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+  }
+  .btn-contact:hover,
+  .btn-contact:focus {
+    background-color: #c2185b;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    outline: none;
+  }
+
+@media (max-width: 600px) {
+    body {
+      font-size: 15px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+    }
+
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+
+    .gallery img {
+      width: 90%;
+      height: auto;
+    }
+
+    iframe {
+      width: 90% !important;
+    }
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <img src="0.png">
+  <div>
+    <h1>Deschamps Flowers</h1>
+    <p>Detalles que enamoran</p>
+  </div>
+</header>
+
+<nav>
+  <a href="#inicio">Inicio</a>
+  <div class="dropdown">
+    <button>Arreglos</button>
+    <div class="dropdown-content">
+      <a href="#arreglos-florales">Arreglos Florales</a>
+      <a href="#arreglos-helio">Arreglos con Helio</a>
+      <a href="#arreglos-madres">Arreglos Madres</a>
+      <a href="#arreglos-padres">Arreglos Padres</a>
+      <a href="#arreglos-cumpleaños">Arreglos Cumpleaños</a>
+      <a href="#arreglos-mejorarte">Arreglos Recuperación</a>
+      <a href="#ramo-novia">Ramo de Novia</a>
+      <a href="#flores-eternas">Flores Eternas y Corona funebre</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button>Alquiler</button>
+    <div class="dropdown-content">
+      <a href="#alquiler-articulos-eventos">Artículos Eventos</a>
+      <a href="#alquiler-sillas-mesas">Sillas y Mesas</a>
+      <a href="#alquiler-vestido-novia">Vestido de Novia</a>
+      <a href="#alquiler-cilindro">Cilindro</a>
+      <a href="#alquiler-arco-metalico">Arco Metálico</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button>Personalizados</button>
+    <div class="dropdown-content">
+      <a href="#tarjetas-personalizadas">Tarjetas</a>
+      <a href="#tazas-personalizadas">Tazas</a>
+      <a href="#brochure-personalizadas">Brochure</a>
+      <a href="#bandeja-personalizadas">Bandeja</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button>Decoración</button>
+    <div class="dropdown-content">
+      <a href="#cumpleaños">Cumpleaños</a>
+      <a href="#boda">Boda</a>
+      <a href="#graduacion">Graduación</a>
+      <a href="#bautizo">Bautizo</a>
+    </div>
+  </div>
+
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<section id="inicio">
+  <h2>Inicio</h2>
+  <p>Bienvenido a Deschamps Flowers, tu mejor opción en productos florales y decoración.</p>
+</section>
+
+<section id="arreglos-florales">
+  <h2>Arreglos Florales</h2>
+  <div class="gallery">
+    <img src="1.jpeg" alt="Arreglo 1">
+    <img src="2.jpeg" alt="Arreglo 2">
+    <img src="3.jpeg" alt="Arreglo 3">
+    <img src="4.jpeg" alt="Arreglo 4">
+    <img src="5.jpeg" alt="Arreglo 5">
+    <img src="6.jpeg" alt="Arreglo 6">
+    <img src="7.jpeg" alt="Arreglo 7">
+    <img src="8.jpeg" alt="Arreglo 8">
+    <img src="9.jpeg" alt="Arreglo 9">
+    <img src="10.jpeg" alt="Arreglo 10">
+    <img src="11.jpeg" alt="Arreglo 11">
+    <img src="12.jpeg" alt="Arreglo 12">
+    <img src="13.jpeg" alt="Arreglo 13">
+    <img src="14.jpeg" alt="Arreglo 14">
+    <img src="15.jpeg" alt="Arreglo 15">
+    <img src="16.jpeg" alt="Arreglo 16">
+    <img src="17.jpeg" alt="Arreglo 17">
+  </div>
+</section>
+
+<section id="arreglos-helio">
+  <h2>Arreglos con Helio</h2>
+  <div class="gallery">
+    <img src="18.jfif" alt="Helio 18">
+    <img src="19.jfif" alt="Helio 19">
+    <img src="20.jfif" alt="Helio 20">
+    <img src="21.jfif" alt="Helio 21">
+    <img src="22.jfif" alt="Helio 22">
+    <img src="23.jpg" alt="Helio 23">
+    <img src="24.jfif" alt="Helio 24">
+  </div>
+</section>
+
+<section id="arreglos-madres">
+  <h2>Arreglos Madres</h2>
+  <div class="gallery">
+    <img src="25.jpeg" alt="Helio 18">
+    <img src="26.jpeg" alt="Helio 19">
+    <img src="27.jpeg" alt="Helio 20">
+    <img src="28.jpeg" alt="Helio 21">
+    <img src="29.jpeg" alt="Helio 22">
+    <img src="30.jpeg" alt="Helio 23">
+    <img src="31.jpeg" alt="Helio 24">
+    <img src="32.jpeg" alt="Helio 22">
+  </div>
+</section>
+
+<section id="arreglos-padres">
+  <h2>Arreglos Padres</h2>
+  <div class="gallery">
+    <img src="33.jfif" alt="Arreglo Padre 1">
+    <img src="34.jfif" alt="Arreglo Padre 2">
+    <img src="35.jpg" alt="Arreglo Padre 3">
+    <img src="36.jfif" alt="Arreglo Padre 4">
+    <img src="37.jpg" alt="Arreglo Padre 5">
+  </div>
+</section>
+
+<section id="arreglos-cumpleaños">
+  <h2>Arreglos Cumpleaños</h2>
+  <div class="gallery">
+    <img src="38.png" alt="Cumpleaños 1">
+    <img src="39.png" alt="Cumpleaños 2">
+    <img src="40.png" alt="Cumpleaños 3">
+    <img src="41.jpg" alt="Cumpleaños 4">
+    <img src="42.png" alt="Cumpleaños 5">
+    <img src="43.png" alt="Cumpleaños 6">
+    <img src="44.png" alt="Cumpleaños 7">
+    <img src="45.jpg" alt="Cumpleaños 8">
+  </div>
+</section>
+
+<section id="arreglos-mejorarte">
+  <h2>Arreglos Recuperación</h2>
+  <div class="gallery">
+    <img src="46.jpeg" alt="Recuperación 1">
+    <img src="47.jpeg" alt="Recuperación 2">
+    <img src="48.jpeg" alt="Recuperación 3">
+    <img src="49.jpeg" alt="Recuperación 4">
+  </div>
+</section>
+
+<section id="ramo-novia">
+  <h2>Ramo de Novia</h2>
+  <div class="gallery">
+    <img src="50.jpeg" alt="Ramo Novia 1">
+    <img src="51.jpeg" alt="Ramo Novia 2">
+    <img src="52.jpeg" alt="Ramo Novia 3">
+    <img src="53.png" alt="Ramo Novia 4">
+    <img src="54.jpeg" alt="Ramo Novia 5">
+    <img src="55.jpeg" alt="Ramo Novia 6">
+  </div>
+</section>
+
+<section id="flores-eternas">
+  <h2>Flores Eternas y Corona funebre</h2>
+  <div class="gallery">
+    <img src="56.jpeg" alt="Flores Eternas y Corona funebre 1">
+    <img src="57.jpeg" alt="Flores Eternas y Corona funebre 2">
+    <img src="58.jpeg" alt="Flores Eternas y Corona funebre 3">
+    <img src="59.jpeg" alt="Flores Eternas y Corona funebre 4">
+    <img src="61.jpeg" alt="Flores Eternas y Corona funebres 5">
+    <img src="62.jpeg" alt="Flores Eternas y Corona funebre 6">
+    <img src="63.jpeg" alt="Flores Eternas y Corona funebre 7">
+    <img src="64.jpeg" alt="Flores Eternas y Corona funebre 8">
+    <img src="65.jpeg" alt="Flores Eternas y Corona funebre 9">
+    <img src="66.jpeg" alt="Flores Eternas y Corona funebre 10">
+    <img src="67.jpeg" alt="Flores Eternas y Corona funebre 11">
+    <img src="68.jpeg" alt="Flores Eternas y Corona funebre 12">
+    <img src="69.jpeg" alt="Flores Eternas y Corona funebre 13">
+    <img src="70.jpeg" alt="Flores Eternas y Corona funebre 14">
+    <img src="71.jpeg" alt="Flores Eternas y Corona funebre 15">
+    <img src="72.jpeg" alt="Flores Eternas y Corona funebre 16">
+    <img src="73.jpeg" alt="Flores Eternas y Corona funebre 17">
+    <img src="74.jpeg" alt="Flores Eternas y Corona funebre 18">
+    <img src="75.jpeg" alt="Flores Eternas y Corona funebre 19">
+    <img src="76.png" alt="Artículo Evento y Corona funebre 20">
+  </div>
+</section>
+
+<section id="alquiler-articulos-eventos">
+  <h2>Artículos para Eventos</h2>
+  <div class="gallery">
+    <img src="77.jpg" alt="Artículo Evento 2">
+    <img src="78.jfif" alt="Artículo Evento 3">
+    <img src="79.jfif" alt="Artículo Evento 4">
+    <img src="80.jfif" alt="Artículo Evento 5">
+  </div>
+</section>
+
+<section id="alquiler-sillas-mesas">
+  <h2>Sillas y Mesas</h2>
+  <div class="gallery">
+    <img src="81.jpeg" alt="Sillas y Mesas">
+  </div>
+</section>
+
+<section id="alquiler-vestido-novia">
+  <h2>Vestido de Novia</h2>
+  <div class="gallery">
+    <img src="82.jpeg" alt="Vestido Novia 1">
+    <img src="83.jpeg" alt="Vestido Novia 2">
+    <img src="84.jpeg" alt="Vestido Novia 3">
+  </div>
+</section>
+
+<section id="alquiler-cilindro">
+  <h2>Cilindro</h2>
+  <div class="gallery">
+    <img src="85.webp" alt="Cilindro">
+  </div>
+</section>
+
+<section id="alquiler-arco-metalico">
+  <h2>Arco Metálico</h2>
+  <div class="gallery">
+    <img src="86.jpeg" alt="Arco Metálico 1">
+    <img src="87.jpg" alt="Arco Metálico 2">
+    <img src="88.webp" alt="Arco Metálico 3">
+    <img src="89.webp" alt="Arco Metálico 3">
+  </div>
+</section>
+
+<section id="tarjetas-personalizadas">
+  <h2>Tarjetas</h2>
+  <div class="gallery">
+    <img src="90.png" alt="Tarjetas 1">
+    <img src="91.png" alt="Tarjetas 2">
+    <img src="92.png" alt="Tarjetas 3">
+  </div>
+</section>
+
+<section id="tazas-personalizadas">
+  <h2>Tazas</h2>
+  <div class="gallery">
+    <img src="93.jpg" alt="Tazas 1">
+    <img src="94.jpg" alt="Tazas 2">
+    <img src="95.jpg" alt="Tazas 3">
+    <img src="96.jfif" alt="Tazas 4">
+  </div>
+</section>
+
+<section id="brochure-personalizadas">
+  <h2>Brochure</h2>
+  <div class="gallery">
+    <img src="97.png" alt="Brochure 1">
+    <img src="98.webp" alt="Brochure 2">
+    <img src="99.jpg" alt="Brochure 3">
+    <img src="100.jpg" alt="Brochure 4">
+  </div>
+</section>
+
+
+<section id="bandeja-personalizadas">
+  <h2>Bandeja</h2>
+  <div class="gallery">
+    <img src="101.jpeg" alt="Bandeja 2">
+    <img src="102.jpeg" alt="Bandeja 3">
+    <img src="103.jpeg" alt="Bandeja 4">
+    <img src="104.jpeg" alt="Bandeja 5">
+    <img src="105.jpeg" alt="Bandeja 6">
+    <img src="106.jpeg" alt="Bandeja 7">
+  </div>
+</section>
+
+<section id="cumpleaños">
+  <h2>Decoración Cumpleaños</h2>
+  <div class="gallery">
+    <img src="107.jpeg" alt="Cumpleaños 1">
+    <img src="108.jpeg" alt="Cumpleaños 2">
+    <img src="109.jpeg" alt="Cumpleaños 3">
+    <img src="110.jpeg" alt="Cumpleaños 4">
+    <img src="111.jpeg" alt="Cumpleaños 5">
+    <img src="112.jpeg" alt="Cumpleaños 6">
+    <img src="113.jpeg" alt="Cumpleaños 7">
+  </div>
+</section>
+
+<section id="boda">
+  <h2>Decoración Boda</h2>
+  <div class="gallery">
+    <img src="114.jpeg" alt="Boda 1">
+    <img src="115.jpeg" alt="Boda 2">
+    <img src="116.jpeg" alt="Boda 3">
+    <img src="117.jpeg" alt="Boda 4">
+    <img src="118.jpeg" alt="Boda 5">
+    <img src="119.jpeg" alt="Boda 6">
+    <img src="120.jpeg" alt="Boda 7">
+    <img src="121.jpeg" alt="Boda 8">
+    <img src="122.jpeg" alt="Boda 9">
+    <img src="123.jpeg" alt="Boda 10">
+    <img src="124.jpeg" alt="Boda 11">
+    <img src="125.jpeg" alt="Boda 12">
+    <img src="126.jpeg" alt="Boda 13">
+    <img src="127.jpeg" alt="Boda 14">
+    <img src="128.jpeg" alt="Boda 15">
+    <img src="129.jpeg" alt="Boda 16">
+  </div>
+</section>
+
+<section id="graduacion">
+  <h2>Decoración Graduación</h2>
+  <div class="gallery">
+    <img src="130.jfif" alt="Graduación 1">
+    <img src="131.jpeg" alt="Graduación 2">
+    <img src="132.jpeg" alt="Graduación 3">
+    <img src="133.jpeg" alt="Graduación 4">
+    <img src="134.jpeg" alt="Graduación 5">
+  </div>
+</section>
+
+<section id="bautizo">
+  <h2>Decoración Bautizo</h2>
+  <div class="gallery">
+    <img src="135.jpg" alt="Bautizo">
+  </div>
+</section>
+
+<section id="contacto">
+  <h2>Contáctanos</h2>
+  <p>Estamos aquí para ayudarte. Puedes contactarnos por cualquiera de las siguientes vías:</p>
+  <div class="contact-buttons">
+    <a href="https://wa.me/18099123372" target="_blank" rel="noopener noreferrer" class="btn-contact">💬 WhatsApp</a>
+    <a href="https://facebook.com/deschampsflowers" target="_blank" rel="noopener noreferrer" class="btn-contact">👍 Facebook</a>
+    <a href="https://instagram.com/deschampsflowers" target="_blank" rel="noopener noreferrer" class="btn-contact">📸 Instagram</a>
+  </div>
+  <p><strong>Dirección:📍 Calle Respaldo Pdte. Antonio Guzmán #22, Lotería de Savica, Autopista de San Isidro</strong></p>
+  <div style="margin: 1rem 0; display: flex; justify-content: center; flex-direction: column; align-items: center;">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3760.4996482362265!2d-69.8348505!3d18.4937596!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf87c8f07007f3%3A0x454650f152d21554!2sDESCHAMPS%27%20FLOWERS!5e0!3m2!1ses-419!2sdo!4v1720425306556!5m2!1ses-419!2sdo" 
+      width="100%" 
+      height="400" 
+      style="border:0; border-radius: 8px; max-width: 600px;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    <a href="https://www.google.com/maps?q=deschamps.flowers" target="_blank" rel="noopener noreferrer"
+       style="margin-top: 1rem; padding: 0.7rem 1.5rem; background-color: #e91e63; color: white; border-radius: 25px; text-decoration: none; font-weight: 600; box-shadow: 0 3px 6px rgba(0,0,0,0.2);">
+      Ver en Google Maps
+    </a>
+  </div>
+</section>
+
+
+</body>
+</html>
